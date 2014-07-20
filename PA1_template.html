@@ -242,6 +242,8 @@ na_steps
 
 <p>###2. Filling in all of the missing values in the dataset:</p>
 
+<p>The mean for the 5-minute interval is useed to fill NA.</p>
+
 <pre><code class="r">int_dat &lt;- split(dat$steps, dat$interval)
 int_mean &lt;- sapply(int_dat, mean, na.rm=TRUE)
 for(i in 1:nrow(dat)){
